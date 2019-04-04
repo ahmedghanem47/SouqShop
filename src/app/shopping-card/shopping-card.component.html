@@ -1,0 +1,30 @@
+<section>
+    <h1>Shopping Card Items</h1>
+<ng-container *ngIf="card$ | async as card">
+you have {{card.getTotalCount}} Items in Your Card
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prodId of card.productid">
+            <td>{{card.items[prodId].product.title}}</td>
+            <td>{{card.items[prodId].quantity}}</td>
+            <td>{{card.items[prodId].product.price}}</td>
+
+
+        </tr>
+    </tbody>
+    <tfoot>
+        <th>Total :</th>
+        <td></td>
+        <th>{{card.totalItemsPrice}}</th>
+      </tfoot>
+</table>
+</ng-container>
+<button class="btn btn-danger" (click)="clearAll()">Clear Shopping Cart</button>
+</section>

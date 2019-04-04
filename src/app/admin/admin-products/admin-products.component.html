@@ -1,0 +1,25 @@
+<section>
+    <div>
+        <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
+    </div>
+    <div>
+            <table class="table" >
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">category</th>
+                        <th scope="col">Edit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let product of products$ | async">
+                        <td>{{product.payload.val().title}}</td>
+                        <td>{{product.payload.val().price}}</td>
+                        <td>{{product.payload.val().category}}</td>
+                        <td><a [routerLink]="['/admin/products/',product.key]">Edit</a></td> 
+                      </tr>
+                    </tbody>
+                  </table>
+    </div>
+</section>

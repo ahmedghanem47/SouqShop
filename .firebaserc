@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dist": "souqdeploy",
+    "default": "souqdeploy"
+  }
+}

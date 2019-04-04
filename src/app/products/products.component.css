@@ -1,0 +1,8 @@
+*{
+        box-sizing: border-box;
+
+}
+.list-group-item-action:hover{
+    background-color: rgb(16, 16, 173);
+    cursor: pointer;
+}

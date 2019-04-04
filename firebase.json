@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/SouqShop",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
